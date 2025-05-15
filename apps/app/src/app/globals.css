@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.chrome-picker {
+  width: 100% !important;
+  background: #55575f !important;
+  border-radius: 8px !important;
+  > div:first-child {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+  }
+}
+
+#rc-editable-input-4 {
+  background: #55575f !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff4d !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+#rc-editable-input-2 {
+  background: #55575f !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff4d !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+.animated-gif {
+  width: 100%;
+  height: 60px;
+}
+
+.setup-input {
+  background-color: #55575f;
+  color: #bbbcbf;
+  width: 100%;
+}
+
+.ant-picker-separator {
+  color: white !important;
+  margin-bottom: 8px !important;
+}
+
+.input-field:hover {
+  outline: #f143e2 solid 1px !important;
+}
+
+.input-field:focus-visible {
+  outline: #f143e2 solid 1px !important;
+}
+
+.ant-picker {
+  border: 1px solid transparent !important;
+}
+
+.ant-picker:hover {
+  border: 1px solid #f143e2 !important;
+}
+
+.ant-picker:focus-within {
+  border: 1px solid #f143e2 !important;
+}
+
+.ant-picker-active-bar {
+  background: #f143e2 !important;
+}
+
+.ant-picker-dropdown {
+  z-index: 9999 !important;
+}
+
+.createDateRangePicker
+  .ant-picker-cell-in-view.ant-picker-cell-range-start
+  .ant-picker-cell-inner {
+  background: linear-gradient(
+    93.3deg,
+    #f143e2 2.36%,
+    #40187f 99.66%
+  ) !important;
+}
+
+.createDateRangePicker
+  .ant-picker-cell-in-view.ant-picker-cell-range-end
+  .ant-picker-cell-inner {
+  background: linear-gradient(
+    93.3deg,
+    #f143e2 2.36%,
+    #40187f 99.66%
+  ) !important;
+}
+
+.createDateRangePicker
+  .ant-picker-time-panel-column
+  > li.ant-picker-time-panel-cell-selected
+  .ant-picker-time-panel-cell-inner {
+  background: #fcbbea !important;
+}
+
+.createDateRangePicker .ant-btn-primary {
+  background: linear-gradient(
+    93.3deg,
+    #f143e2 2.36%,
+    #40187f 99.66%
+  ) !important;
+  border-color: linear-gradient(
+    93.3deg,
+    #f143e2 2.36%,
+    #40187f 99.66%
+  ) !important;
+}
+
+.ant-picker-input > input {
+  color: white !important;
+}
+
+.ant-picker-input > input:disabled {
+  color: grey !important;
+}
+
+.ant-picker-suffix {
+  color: white !important;
+}

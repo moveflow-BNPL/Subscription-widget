@@ -1,0 +1,81 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "@moveflow/builder#build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": [
+        "NEXT_PUBLIC_INFURA_PROJECT_ID",
+        "NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID",
+        "NEXT_PUBLIC_SUBSCRIPTION_CONTRACT_ID",
+        "NEXT_PUBLIC_GOERLI_CONTRACT_ID",
+        "NEXT_PUBLIC_POLYGON_ZK_EVM_CONTRACT_ID",
+        "NEXT_PUBLIC_SCROLL_CONTRACT_ID",
+        "NEXT_PUBLIC_MUMBAI_TESTNET_CONTRACT",
+        "WALLET_CONNECT_ID",
+        "INFURA_ID",
+        "ETHEREUM_CONTRACT",
+        "MUMBAI_TESTNET_CONTRACT",
+        "INFURA_PROJECT_ID",
+        "WALLET_CONNECT_PROJECT_ID",
+        "SUBSCRIPTION_CONTRACT_ID",
+        "GOERLI_CONTRACT_ID",
+        "POLYGON_ZK_EVM_CONTRACT_ID",
+        "SCROLL_CONTRACT_ID"
+      ]
+    },
+    "@moveflow/builder#dev": {
+      "cache": false,
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": [
+        "NEXT_PUBLIC_INFURA_PROJECT_ID",
+        "NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID",
+        "NEXT_PUBLIC_SUBSCRIPTION_CONTRACT_ID",
+        "NEXT_PUBLIC_GOERLI_CONTRACT_ID",
+        "NEXT_PUBLIC_POLYGON_ZK_EVM_CONTRACT_ID",
+        "NEXT_PUBLIC_SCROLL_CONTRACT_ID",
+        "NEXT_PUBLIC_MUMBAI_TESTNET_CONTRACT",
+        "WALLET_CONNECT_ID",
+        "INFURA_ID",
+        "ETHEREUM_CONTRACT",
+        "MUMBAI_TESTNET_CONTRACT",
+        "INFURA_PROJECT_ID",
+        "WALLET_CONNECT_PROJECT_ID",
+        "SUBSCRIPTION_CONTRACT_ID",
+        "GOERLI_CONTRACT_ID",
+        "POLYGON_ZK_EVM_CONTRACT_ID",
+        "SCROLL_CONTRACT_ID"
+      ]
+    },
+    "@moveflow/demo#build": {
+      "cache": false,
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "@moveflow/demo#dev": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "start": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}
